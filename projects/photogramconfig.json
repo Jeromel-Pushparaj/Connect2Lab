@@ -1,0 +1,9 @@
+{
+	"db_server":"localhost",
+	"db_username":"jpt",
+	"db_password":"mypass",
+	"db_name":"thumbnailreview",
+	"base_path": "/",
+	"upload_path": "/home/sibidharan/photogram_uploads/"
+
+}
