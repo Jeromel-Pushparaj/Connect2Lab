@@ -2,8 +2,8 @@
 	"db_server":"localhost",
 	"db_username":"jpt",
 	"db_password":"mypass",
-	"db_name":"thumbnailreview",
+	"db_name":"connect2lab",
 	"base_path": "/",
-	"upload_path": "/home/sibidharan/photogram_uploads/"
+	"upload_path": "/home/jeromel/connect2lab/"
 
 }
