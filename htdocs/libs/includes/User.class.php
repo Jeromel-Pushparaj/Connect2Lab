@@ -131,7 +131,6 @@ public function __construct($username)
     $this->table = 'auth';
     // Sanitize the input
     $username = trim($username);
-
     // Check if $username is numeric, indicating it's an ID, otherwise treat it as a username
     if (is_numeric($username)) {
         // Search by user ID
@@ -140,23 +139,17 @@ public function __construct($username)
         // Search by username
         $sql = "SELECT `id`, `username` FROM `auth` WHERE `username` = ? LIMIT 1";
     }
-
     // Prepare the statement
     $stmt = $this->conn->prepare($sql);
-
     if (!$stmt) {
         throw new Exception("Error preparing SQL statement: " . $this->conn->error);
     }
-
     // Bind the parameter
     $stmt->bind_param("s", $username);
-
     // Execute the statement
     $stmt->execute();
-
     // Fetch the result
     $result = $stmt->get_result();
-
     // Check if a user is found
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
@@ -167,7 +160,6 @@ public function __construct($username)
         // User not found
         throw new Exception("Username or ID doesn't exist.");
     }
-
     // Close statement and connection
     $stmt->close();
 }
