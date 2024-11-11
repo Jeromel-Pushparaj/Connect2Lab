@@ -1,4 +1,5 @@
 <?php
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Check which button was clicked
     if (isset($_POST['action'])) {
@@ -13,3 +14,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 }
+
+Session::loadTemplate('machine/pop');
