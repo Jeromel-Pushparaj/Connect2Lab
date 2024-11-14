@@ -7,4 +7,4 @@
 				<a href="/signup.php" class="btn btn-secondary my-2">Register</a>
             </div>
         </div>
-    </section>
+</section>
